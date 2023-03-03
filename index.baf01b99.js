@@ -1,0 +1,2 @@
+let t=JSON.parse(localStorage.getItem("savedNews"))||[],n=document.getElementById("gallery");if(t.forEach((e=>{let t=document.createElement("div");t.className="news-item",t.innerHTML=`\n    <h2>${e.title}</h2>\n    <p>${e.description}</p>\n    <button class="remove-btn">Remove from Favorites</button>\n  `,n.appendChild(t)})),e.target.classList.contains("remove-btn")){let a=e.target.parentNode,l=a.querySelector("h2").textContent;t=t.filter((e=>e.title!==l)),localStorage.setItem("savedNews",JSON.stringify(t)),n.removeChild(a)}
+//# sourceMappingURL=index.baf01b99.js.map
